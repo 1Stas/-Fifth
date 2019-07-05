@@ -21,3 +21,9 @@ npm i gulp -S            и др пакеты, создаст папку node_mo
 npm install rimraf -g    установка пакета для удаления node_modules
 
 rimraf node_modules      удаление
+
+npm install -S package1 package2 package3 
+
+                         установка нескольких пакетов сразу
+
+npm outdated             обновление установленных пакетов
