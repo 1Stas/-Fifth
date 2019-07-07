@@ -17,6 +17,8 @@ npm i gulp -S            и др пакеты, создаст папку node_mo
 -S                       для записи в dependencies
 -D                       для записи в devDependencies
 
+npm i                    установит сразу все пакеты, которые записаны в dependencies файла package.json
+
 
 npm install rimraf -g    установка пакета для удаления node_modules
 
