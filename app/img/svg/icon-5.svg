@@ -1,1 +1,2 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 66 56" width="66" height="56"><defs><clipPath clipPathUnits="userSpaceOnUse" id="cp1"><path d="M0 0L66 0L66 56L0 56Z" /></clipPath></defs><style>tspan { white-space:pre }.shp0 { fill: #231f20 } </style><g clip-path="url(#cp1)"><path class="shp0" d="M66.1 17.76C66.1 8.11 58.28 0.29 48.63 0.29C41.82 0.29 35.93 4.19 33.05 9.87C30.17 4.19 24.28 0.29 17.47 0.29C7.82 0.29 0 8.11 0 17.76C0 36.01 29.31 56 33.05 56C36.79 56 66.1 36.1 66.1 17.76Z" /></g></svg>
+<svg viewBox="0 0 66 56" width="66" height="56">
+<path d="M66.1 17.76C66.1 8.11 58.28 0.29 48.63 0.29C41.82 0.29 35.93 4.19 33.05 9.87C30.17 4.19 24.28 0.29 17.47 0.29C7.82 0.29 0 8.11 0 17.76C0 36.01 29.31 56 33.05 56C36.79 56 66.1 36.1 66.1 17.76Z" /></svg>

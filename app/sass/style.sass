@@ -1,8 +1,13 @@
 body 
 	font-family: "Open Sans"
 	font-weight: 400
-	box-sizing: border-box
 	margin: 0
+	box-sizing: border-box
+	a 
+		text-decoration: none
+
+img 
+	width: 100%
 
 .button 
 	padding: 10px
@@ -15,17 +20,279 @@ body
 	&:active
 		color: #8e8e8e
 
-.footer
-	margin: 100px
-	background: url(../img/svg/1mishka-logo-desktop.svg) no-repeat
-	width: 200px
-	height: 200px
-	svg 
-		.shp0
-			opacity: 1.5
-		.shp1 
-			fill: red
-	.footer_wrapper
-		margin: 100px
+.navbar 
+	display: flex
+	flex-wrap: wrap
+	justify-content: space-between
+	align-items: center
+	width: 90%
+	margin: 0 auto
+	border-bottom: 1px solid #e8e8e8
+	padding-left: 50px
+	padding-right: 50px
+	a 
+		font-size: 20px
+		color: #000
+		font-weight: 800
+		&:hover
+			opacity: 0.6
+		&:active
+			color: #ED69AE
+		img 
+			width: 180px
+			height: 90px
+		&:nth-child(4) img
+			&:hover
+				opacity: 0.8
+			&:active
+				opacity: 0.2
+		&:nth-child(6)
+			svg
+				width: 25px
+				height: 25px
+				fill: #e8e8e8
+			&:hover svg
+				fill: #64D1BA
+			&:active svg
+				fill: #CCF2E7
+		&:nth-child(8)
+			position: relative
+			padding-left: 50px
+			svg 
+				position: absolute
+				left: 0px
+				width: 25px
+				height: 25px
+				fill: #e8e8e8
+			&:hover svg
+				fill: #64D1BA
+			&:active svg
+				fill: #CCF2E7
+	span 
+		height: 90px
+		border-right: 1px solid #e8e8e8
+		width: 1px
 
+.under-nav, .under-nav-tablet 
+	position: relative
+	height: 0
+	z-index: 1
+	width: 90%
+	margin: 0 auto
+	top: 40px
+	display: flex
+	justify-content: space-between
+	padding-left: 50px
+	padding-right: 50px
+	a 
+		font-size: 18px
+		color: #000
+		font-weight: 800
+		&:hover
+			opacity: 0.6
+		&:active
+			color: #ED69AE
+		&:nth-child(4)
+			font-weight: 200
+	span 
+		width: 28%
+	
+.navbar-popup
+	display: none
+
+.navbar-open
+	display: block
+
+.navbar
+	.popup_button 
+		position: relative
+		display: block
+		width: 100px
+		height: 100px
+		cursor: pointer
+		border-radius: 5px
+		&:hover
+			opacity: 1
+		span
+			display: block
+			background: #000
+			border-radius: 2px
+		#hamburger 
+			position: absolute
+			height: 100%
+			width: 100%
+			span 
+				width: 60px
+				height: 4px
+				position: relative
+				top: 24px
+				left: 20px
+				margin: 10px 0
+				transition: .5s ease-in-out
+			&:nth-child(1)
+				transition-delay: .5s
+			&:nth-child(2)
+				transition-delay: .625s
+			&:nth-child(3)
+				transition-delay: .75s
+		#cross 
+			position: absolute
+			height: 100%
+			width: 100%
+			transform: rotate(45deg)
+			span
+				transition: .5s ease-in-out
+				&:nth-child(1)
+					height: 0%
+					width: 4px
+					position: absolute
+					top: 10%
+					left: 48px
+					transition-delay: 0s
+				&:nth-child(2)
+					width: 0%
+					height: 4px
+					position: absolute
+					left: 10%
+					top: 48px
+					transition-delay: .25s
+
+.popup_button.open 
+	#hamburger 
+		span 
+			width: 0%
+			&:nth-child(1)
+				transition-delay: 0s
+			&:nth-child(2)
+				transition-delay: .125s
+			&:nth-child(3)
+				transition-delay: .25s
+	#cross 
+		span 
+			&:nth-child(1)
+				height: 80%
+				transition-delay: .625s
+		span 
+			&:nth-child(2)
+				width: 80%
+				transition-delay: .375s
+
+.main-img
+	position: relative
+	h1 
+		position: absolute
+		font-size: 44px
+		transform: translate(78%)
+		top: 180px
+		width: 40%
+		text-align: center
+	img 
+		display: block
 		
+	
+.interior
+	position: relative
+	height: 0
+	width: 90%
+	margin: 0 auto
+	top: -120px
+	div 
+		position: absolute
+		width: 50.1%
+		padding: 30px 40px
+		box-sizing: border-box
+		h3 
+			display: inline-block
+			font-size: 24px
+			color: #f9f9f9
+			width: 200px
+			margin-top: 0px
+			margin-bottom: 20px
+	.int
+		left: 0
+		background: #64D1BC
+		svg
+			display: inline-block
+			position: absolute
+			height: 60px
+			width: 80px
+			fill: #3BB09D
+			right: 20px
+			transition: 1s
+		&:hover svg
+			fill: #F4D540
+	.toy
+		right: 0
+		background: #57C3B3 
+		svg
+			display: inline-block
+			position: absolute
+			height: 60px
+			width: 80px
+			fill: #35AA9A
+			right: 20px 
+			transition: 1s
+		&:hover svg
+			fill: #F770F7
+
+.zigzag
+	position: relative
+	top: -10px
+	svg
+		fill: #fff
+		width: 100%
+
+
+
+.footer
+	height: 500px
+
+
+
+
+@media (max-width: 1000px)
+	.under-nav, .navbar-tablet
+		display: none
+
+	.navbar, .under-nav-tablet
+		padding-left: 0
+		padding-right: 0
+
+	.zigzag
+		top: -20px
+
+@media (min-width: 1000px)
+	.under-nav-tablet
+		display: none
+
+@media (max-width: 800px)
+	.under-nav-tablet
+		span 
+			width: 0%
+	
+	.main-img h1 
+		width: 60%
+		top: 100px
+		transform: translate(32%)
+		font-size: 32px
+
+	.interior div h3 
+		width: 100px
+
+@media (max-width: 600px)
+	.under-nav-tablet
+		display: none
+
+	.navbar 
+		span
+			display: none
+		a:nth-child(6)
+			display: none
+		a:nth-child(8)
+			display: none
+		a:nth-child(4)
+			display: block
+			margin: 0 auto
+			img
+				width: 120px
+
