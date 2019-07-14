@@ -21,25 +21,8 @@ $(document).ready(function() {
 $(document).ready(function() {
 	$('.popup_button').click(function(){
 		$(this).toggleClass('open');
-	$('.navbar-popup').addClass('navbar-open');
-	$('.navbar-popup').removeClass('navbar-open');
 });
 });
-
-function showModalWin() {
-	var darkLayer = document.createElement('div'); // слой затемнения
-	darkLayer.id = 'shadow'; // id чтобы подхватить стиль
-	document.body.appendChild(darkLayer); // включаем затемнение
-
-	var modalWin = document.getElementById('navbarPopup'); // находим наше "окно"
-	modalWin.style.display = 'block'; // "включаем" его
-
-	darkLayer.onclick = function () {  // при клике на слой затемнения все исчезнет
-			darkLayer.parentNode.removeChild(darkLayer); // удаляем затемнение
-			modalWin.style.display = 'none'; // делаем окно невидимым
-			return false;
-	};
-}
 
 
 // Карусель.
