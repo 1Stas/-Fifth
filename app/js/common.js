@@ -1,22 +1,3 @@
-$(document).ready(function() {
-	$('.1popup_button')
-	.magnificPopup({
-		type: 'inline',
-		preloader: false,
-		focus: '#text',
-		// When elemened is focused, some mobile browsers in some cases zoom in
-		// It looks not nice, so we disable it:
-		callbacks: {
-			beforeOpen: function() {
-				if($(window).width() < 700) {
-					this.st.focus = false;
-				} else {
-					this.st.focus = '#text';
-				}
-			}
-		}
-	});
-});
 
 $(document).ready(function() {
 	$('.popup_button').click(function(){
@@ -79,25 +60,60 @@ $(document).ready(function(){
 	});
 });
 
-// Слайдер 20 20 https://github.com/zurb/twentytwenty
+// Своя иконка на картах
 
-// Инициализируем плагин
-$(function(){
-  $("#container1").twentytwenty();
-});
+ymaps.ready(function () {
+	var myMap = new ymaps.Map('map', {
+					center: [59.9387165, 30.3218587], // Y, X более 12000 (относительно центра) может выйти за пределы экрана на мобильных 
+					zoom: 17
+			}, {
+					searchControlProvider: 'yandex#search'
+			}),
 
-// Настройки
+			// Создаём макет содержимого.
+			MyIconContentLayout = ymaps.templateLayoutFactory.createClass(
+					'<div style="color: #FFFFFF; font-weight: bold;">$[properties.iconContent]</div>'
+			),
 
-$(function(){
-  $("#container1").twentytwenty({
-    default_offset_pct: 0.5, // сколько показывать 'изображение до' в процентах (максимально 1) сразу после загрузки страницы
-    orientation: 'horizontal', // ориентация слайдера ('horizontal' или 'vertical')
-    before_label: 'До', // подпись 'до'
-    after_label: 'После', // подпись 'после'
-    no_overlay: false, // не показывать затемнение с надписями 'до' и 'после'
-    move_slider_on_hover: false, // двигать "ползунок" слайдера вместе с курсором мыши
-    move_with_handle_only: true, // двигать слайдер только за его "ползунок"
-    click_to_move: false // разрешить перемещение "ползунка" слайдера по клику на изображении
-  });
+			myPlacemark = new ymaps.Placemark(myMap.getCenter(), {
+					hintContent: 'Собственный значок метки',
+					balloonContent: 'Html Accademy'
+			}, {
+					// Опции.
+					// Необходимо указать данный тип макета.
+					iconLayout: 'default#image',
+					// Своё изображение иконки метки.
+					iconImageHref: '',
+					// Размеры метки.
+					iconImageSize: [30, 42],
+					// Смещение левого верхнего угла иконки относительно
+					// её "ножки" (точки привязки).
+					iconImageOffset: [-5, -38]
+			}),
+
+			myPlacemarkWithContent = new ymaps.Placemark([59.9387205, 30.3230652], {
+					hintContent: '',
+					balloonContent: 'Html Accademy',
+					iconContent: '' //Не забыть удалить
+			}, {
+					// Опции.
+					// Необходимо указать данный тип макета.
+					iconLayout: 'default#imageWithContent',
+					// Своё изображение иконки метки.
+					iconImageHref: '../img/svg/map-pin.svg',
+					// Размеры метки.
+					iconImageSize: [70, 120],
+					// Смещение левого верхнего угла иконки относительно
+					// её "ножки" (точки привязки).
+					iconImageOffset: [-30, -110],
+					// Смещение слоя с содержимым относительно слоя с картинкой.
+					iconContentOffset: [15, 15],
+					// Макет содержимого.
+					iconContentLayout: MyIconContentLayout
+			});
+
+	myMap.geoObjects
+			.add(myPlacemark)
+			.add(myPlacemarkWithContent);
 });
 

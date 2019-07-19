@@ -10,10 +10,15 @@ img
 	width: 100%
 
 .button 
+	display: block
 	padding: 10px
 	border: 2px solid #444
 	font-size: 17px
 	font-weight: 700
+	text-align: center
+	text-decoration: none
+	color: #444
+	box-sizing: border-box
 	&:hover
 		background: #444444
 		color: #ffffff
@@ -291,13 +296,335 @@ img
 		fill: #fff
 		width: 100%
 
+.baskets
+	position: relative
+	width: 90%
+	margin: 0 auto
+	display: flex
+	flex-wrap: wrap
+	margin-top: 40px
+	&:before
+		position: absolute
+		content: "ТОВАР НЕДЕЛИ"
+		font-size: 26px
+		font-weight: 800
+		width: 110px
+		text-align: center
+		color: #60D1BE
+		top: 70px
+		left: 0px
+	.bask-text
+		position: relative
+		display: flex
+		flex-direction: column
+		width: 50%
+		padding: 200px 40px 0px 150px
+		box-sizing: border-box
+		h2 
+			position: absolute
+			font-size: 72px
+			margin: 0
+			left: 150px
+			top: 50px
+			width: 750px
+		p, a
+			font-size: 20px
+			line-height: 2
+			margin: 0
+		table 
+			margin-top: 60px
+			width: 100%
+			td 
+				font-size: 20px
+				height: 50px
+				width: 100px
+				border-bottom: 1px solid #ddd
+		span 
+			text-align: center
+			color: #444
+			display: block
+			font-size: 24px
+			font-weight: 800
+			margin-top: auto
+			margin-bottom: 40px
+	.bask-img 
+		width: 50%
+	
+.zigzag-line
+	margin-top: 60px
+	svg
+		fill: #f1f1f1
+		width: 100%
 
+.about
+	width: 90%
+	margin: 0 auto
+	margin-top: 60px
+	h2 
+		font-size: 60px
+		display: block
+		margin: 0 auto
+		width: 60%
+		margin-bottom: 40px
+	.about-wrapper
+		display: flex
+		flex-wrap: wrap
+		width: 60%
+		margin: 0 auto
+		.about-item
+			width: 50%
+			padding: 20px 20px 20px 0
+			box-sizing: border-box
+			svg
+				fill: #64D1BC
+				width: 50px
+				height: 50px
+				transition: 1s
+			p 
+				font-size: 24px
+				font-weight: 800
+				margin-bottom: 0
+				svg 
+					position: absolute
+					right: 0
+			&:nth-child(even)
+				padding-right: 0
+			&:nth-child(1)
+				span
+					display: block
+					background: url(../img/svg/icon-1.svg) no-repeat
+					background-position: 5px 5px
+					transform: scale(1.4)
+					width: 50px
+					height: 50px
+			&:nth-child(2)
+				&:hover svg 
+					fill: orange
+			&:nth-child(3)
+				&:hover svg 
+					fill: green
+			&:nth-child(4)
+				span
+					display: block
+					background: url(../img/svg/icon-1.svg) no-repeat
+					background-position: -330px -150px
+					transform: scale(1.4)
+					width: 70px
+					height: 50px
+			&:nth-child(5)
+				&:hover svg 
+					fill: red
+			&:nth-child(6)
+				&:hover svg 
+					fill: purple
+
+.reviews 
+	position: relative
+	width: 90%
+	margin: 0 auto
+	padding: 40px 40px 80px 150px
+	margin-top: 50px
+	box-sizing: border-box
+	&:before
+		position: absolute
+		content: ""
+		background: url(../img/review.png) no-repeat
+		top: 0
+		left: 0
+		width: 100%
+		height: 100%
+		z-index: -1
+	.rev-text
+		position: relative
+		h2
+			font-size: 60px
+		a 
+			position: absolute
+			font-size: 24px
+			top: 0
+			right: 0
+			padding: 20px 60px
+		p 
+			font-size: 24px
+		.anastasia
+			position: relative
+			font-weight: 800
+			margin-top: 40px
+			svg 
+				transition: 1s
+			svg:nth-child(1)
+				position: absolute
+				top: 0
+				right: 200px
+				transform: rotate(90deg)
+				&:hover
+					transform: rotate(0deg)
+			svg:nth-child(2)
+				position: absolute
+				top: 0
+				right: 50px
+				transform: rotate(-90deg)
+				&:hover
+					transform: rotate(-180deg)
+
+.contacts 
+	position: relative
+	width: 90%
+	margin: 0 auto
+	margin-top: 80px
+	display: flex
+	flex-wrap: wrap
+	&:before
+		position: absolute
+		content: ""
+		background: url(../img/svg/flag.svg) no-repeat
+		width: 93px
+		height: 110px
+		top: 40px
+		left: 180px
+	.con-text 
+		width: 49%
+		box-sizing: border-box
+		padding: 0px 40px 0px 300px
+		h2 
+			font-size: 60px
+		p, a
+			position: relative
+			font-size: 24px
+			margin-left: 100px
+			line-height: 2
+		p:nth-child(2)
+			border-bottom: 1px solid #63d1bb
+			width: 235px
+			&:before
+				position: absolute
+				content: "e-mail:"
+				top: 0
+				left: -100px
+		p:nth-child(3)
+			&:before
+				position: absolute
+				content: "адрес:"
+				top: 0
+				left: -100px
+		a 
+			margin: 0 auto
+			margin-top: 60px
+	.con-map
+		width: 50%
 
 .footer
-	height: 500px
+	width: 100%
+	margin: 0 auto
+	margin-top: 60px
+	background: #f2f2f2
+	.footer-wrapper
+		width: 90%
+		margin: 0 auto
+		padding: 40px
+		display: flex
+		justify-content: space-between
+		flex-wrap: wrap
+		.footer-item:nth-child(2)
+			text-align: center
+		.footer-item:nth-child(3)
+			text-align: right
+		.footer-item
+			width: 33%
+			text-align: left
+			a 
+				color: #000
+				cursor: pointer
+				svg
+					transition: .5s
+			.footer-logo
+				svg
+					width: 180px
+					height: 70px
+				svg
+					&:hover
+						fill: #63d1bb
+			.tweet
+				display: inline-block
+				width: 40px
+				height: 40px
+				margin: 10px 20px 20px 20px
+				svg:hover
+					fill: #67C9F2
+			.insta
+				display: inline-block
+				width: 40px
+				height: 40px
+				margin: 10px 20px 20px 20px
+				svg:hover
+					fill: #F72BA8
+			.faceb
+				display: inline-block
+				width: 40px
+				height: 40px
+				margin: 10px 20px 20px 20px
+				svg:hover
+					fill: #1877F2
+			.htmlac
+				position: relative
+				padding-right: 60px
+				font-size: 24px
+				font-weight: 800
+				line-height: 84px
+				svg
+					position: absolute
+					top: -4px
+					right: 0
+					width: 50px
+					height: 50px
+					fill: #63d1bb
+					&:hover
+						fill: #221B5C
 
 
+@media (max-width: 1200px)
+	.baskets
+		&:before
+			top: 30px
+			font-size: 22px
+			left: 10px
+		.bask-text
+			padding: 120px 40px 0px 150px
+			table 
+				margin-top: 30px
+				margin-bottom: 20px
+			span 
+				margin-bottom: 20px
+			h2 
+				top: 20px
+				font-size: 60px
 
+	.contacts
+		&:before
+			left: 70px
+		.con-text
+			padding: 0 40px 0 140px
+
+@media (max-width: 1100px)
+	.baskets
+		margin-top: 120px
+		&:before
+			top: -110px
+			font-size: 22px
+			right: 0px
+			left: auto
+		.bask-text
+			padding: 0 40px 0 0
+			h2 
+				top: -120px
+				font-size: 50px
+				left: 0
+
+	.contacts
+		&:before
+			left: 0px
+		.con-text
+			padding: 0 40px 0 70px
 
 @media (max-width: 1000px)
 	.under-nav, .navbar-tablet
@@ -310,9 +637,74 @@ img
 	.zigzag
 		top: -20px
 
+	.about 
+		width: 100%
+		h2 
+			width: 70%
+		.about-wrapper
+			width: 70%
+
+	.reviews
+		padding: 40px 40px 60px 40px
+		.rev-text
+			h2 
+				font-size: 50px
+				a 
+					font-size: 20px
+			p 
+				font-size: 20px
+			.anastasia 
+				svg
+					width: 60px
+					height: 30px
+				svg:nth-child(1)
+					right: 120px
+
+	.contacts
+		margin-top: 0
+		&:before
+			left: auto
+			right: 50px
+		.con-text
+			width: 100%
+			padding: 0 20px 20px 20px
+			h2 
+				font-size: 50px
+			p, a 
+				font-size: 20px
+			a 
+				position: absolute
+				bottom: 40px
+				left: 0
+				width: 100%
+			p:nth-child(2)
+				width: 195px
+		.con-map 
+			width: 100%
+			height: 400px
+			margin-bottom: 140px
+
 @media (min-width: 1000px)
 	.under-nav-tablet
 		display: none
+
+@media (max-width: 900px)
+	.footer
+		.footer-wrapper
+			.footer-item
+				.footer-logo
+				.tweet
+					width: 30px
+					height: 30px
+					margin: 20px 10px 10px 10px
+				.insta
+					width: 30px
+					height: 30px
+					margin: 20px 10px 10px 10px
+				.faceb
+					width: 20px
+					height: 30px
+					margin: 20px 10px 10px 10px
 
 @media (max-width: 800px)
 	.under-nav-tablet
@@ -327,6 +719,104 @@ img
 
 	.interior div h3 
 		width: 100px
+
+	.baskets
+		margin-top: 120px
+		.bask-text 
+			h2 
+				width: 490px
+			p
+				font-size: 16px
+			table 
+				margin-top: 20px
+				td 
+					font-size: 16px
+			span 
+				font-size: 20px
+
+	.about 
+		h2 
+			width: 90%
+			font-size: 50px
+		.about-wrapper
+			width: 90%
+			.about-item
+				p 
+					font-size: 20px
+				svg 
+					width: 40px
+					height: 40px
+				&:nth-child(1)
+					span
+						transform: scale(1.1)
+				&:nth-child(4)
+					span
+						transform: scale(1.1)
+
+	.reviews
+		width: 100%
+
+	.contacts
+		width: 100%
+		.con-text
+			a 
+				margin-left: 5%
+				width: 90%
+
+	.footer
+		margin-top: 0
+		.footer-wrapper
+			padding: 20px
+			.footer-item
+				.footer-logo svg
+					width: 140px
+				.htmlac
+					font-size: 20px
+					svg 
+						width: 40px
+						height: 40px
+
+@media (min-width: 700px)
+	.baskets 
+		.bask-img 
+			span, a 
+				display: none
+
+@media (max-width: 700px)
+	.baskets
+		margin-top: 60px
+		&:before
+			font-size: 20px
+			top: -75px
+		.bask-text
+			padding: 0
+			width: 100%
+			margin-bottom: 40px
+			h2 
+				width: 450px
+				font-size: 40px
+				top: -80px
+			span, a 
+				display: none
+		.bask-img 
+			width: 100%
+			span 
+				text-align: center
+				color: #444
+				display: block
+				font-size: 20px
+				font-weight: 800
+				margin-top: 30px
+				margin-bottom: 20px
+			.button 
+				width: 100%
+				line-height: 2
+
+	.footer
+		.footer-wrapper
+			.footer-item
+				.htmlac
+					padding-right: 40px
 
 @media (min-width: 600px)
 	.navbar
@@ -367,9 +857,103 @@ img
 		width: 90%
 		transform: translate(6%)
 
+	.baskets
+		margin-top: 270px
+
+	.reviews
+		padding: 0
+		&:before
+			background: none
+		.rev-text
+			padding: 0 20px 0 20px
+			margin-bottom: -40px
+			a 
+				position: relative
+				padding: 10px 40px
+
+	.footer
+		.footer-wrapper
+			.footer-item
+				width: 100%
+				.footer-logo
+					display: none
+				.htmlac
+					padding-right: 60px
+				.tweet
+					margin: 10px 30px 30px 30px
+				.insta
+					margin: 10px 30px 30px 30px
+				.faceb
+					margin: 10px 30px 30px 30px
+			.footer-item:nth-child(2)
+				border-bottom: 1px solid #ddd
+			.footer-item:nth-child(3)
+				text-align: center
+
+
 @media (max-width: 500px)
 	.interior
 		top: -40px
+
+	.baskets
+		margin-top: 280px
+		&:before
+			left: -30px
+			right: auto
+			top: -30px
+			width: 200px
+			font-size: 18px
+		.bask-text 
+			margin-bottom: 20px
+			p 
+				margin-top: 20px
+			h2 
+				width: 300px
+				font-size: 30px
+
+	.about
+		margin-top: 10px
+		h2 
+			font-size: 30px
+			margin-bottom: 20px
+		.about-wrapper
+			.about-item
+				width: 100%
+
+	.reviews
+		.rev-text
+			h2 
+				font-size: 30px
+			a 
+				font-size: 20px
+				margin-top: 100px
+			.anastasia
+				svg:nth-child(1)
+					top: 110px
+					left: 50px
+					transform: rotate(0deg)
+				svg:nth-child(2)
+					top: 110px
+					right: 50px
+					transform: rotate(180deg)
+
+	.contacts
+		&:before 
+			display: none
+		.con-text
+			h2 
+				font-size: 30px
+			p, a 
+				font-size: 16px
+			p 
+				margin-left: 80px
+			p:nth-child(2)
+				width: 155px
+				&:before
+					left: -80px
+			p:nth-child(3)
+				&:before
+					left: -80px
 
 @media (max-width: 400px)
 	.main-img h1
@@ -378,3 +962,25 @@ img
 
 	.navbar a:nth-child(4)
 		margin: 0 0 0 30px
+
+@media (max-width: 322px)
+	.reviews
+		.rev-text
+			a 
+				margin-top: 120px
+			.anastasia
+				svg 
+					border: 1px solid #ddd
+					box-sizing: border-box
+				svg:nth-child(1)
+					top: 90px
+					left: 0px
+					width: 141px
+					height: 60px
+					padding: 15px 15px 15px 30px
+				svg:nth-child(2)
+					top: 90px
+					right: 0px
+					width: 141px
+					height: 60px
+					padding: 15px 15px 15px 30px
