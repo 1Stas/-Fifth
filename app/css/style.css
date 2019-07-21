@@ -1,9 +1,10 @@
 @charset "UTF-8";
+* {
+  box-sizing: border-box; }
+
 body {
   font-family: "Open Sans";
-  font-weight: 400;
-  margin: 0;
-  box-sizing: border-box; }
+  font-weight: 400; }
   body a {
     text-decoration: none; }
 
@@ -543,7 +544,7 @@ img {
           fill: #F72BA8; }
       .footer .footer-wrapper .footer-item .faceb {
         display: inline-block;
-        width: 40px;
+        width: 25px;
         height: 40px;
         margin: 10px 20px 20px 20px; }
         .footer .footer-wrapper .footer-item .faceb svg:hover {
@@ -563,6 +564,66 @@ img {
           fill: #63d1bb; }
           .footer .footer-wrapper .footer-item .htmlac svg:hover {
             fill: #221B5C; }
+
+.catalog-title {
+  text-align: center;
+  height: 300px;
+  background: #f1f1f1; }
+  .catalog-title div {
+    height: 1px; }
+  .catalog-title h1 {
+    font-size: 60px;
+    margin-top: 100px; }
+
+.zigzag2 {
+  position: relative; }
+  .zigzag2 svg {
+    position: absolute;
+    top: -30px;
+    fill: #fff;
+    width: 100%; }
+
+.catalog {
+  width: 90%;
+  margin: 0 auto;
+  margin-top: 80px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between; }
+  .catalog .cat-item {
+    position: relative;
+    width: 30%;
+    border: 1px solid #f1f1f1;
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 120px; }
+    .catalog .cat-item picture img {
+      display: block; }
+    .catalog .cat-item p {
+      position: absolute;
+      font-size: 20px;
+      border-top: 1px solid #f1f1f1;
+      margin: 0 20px 30px 20px;
+      padding: 30px 0 0 0;
+      font-weight: 800;
+      width: 90%;
+      bottom: 0; }
+      .catalog .cat-item p svg {
+        position: absolute;
+        right: 0;
+        transition: .5s;
+        top: 20px;
+        width: 30px;
+        fill: #cfcfcf; }
+      .catalog .cat-item p:hover svg {
+        fill: #63d1bb; }
+    .catalog .cat-item .cat-text {
+      padding: 0 20px; }
+      .catalog .cat-item .cat-text h2 {
+        font-size: 30px; }
+      .catalog .cat-item .cat-text span {
+        font-size: 20px;
+        font-weight: 200; }
 
 @media (max-width: 1200px) {
   .baskets:before {
@@ -652,7 +713,9 @@ img {
     .contacts .con-map {
       width: 100%;
       height: 400px;
-      margin-bottom: 140px; } }
+      margin-bottom: 140px; }
+  .footer {
+    margin-top: 0; } }
 
 @media (min-width: 1000px) {
   .under-nav-tablet {
@@ -904,3 +967,46 @@ img {
     width: 141px;
     height: 60px;
     padding: 15px 15px 15px 30px; } }
+
+@media (max-width: 800px) {
+  .catalog-title h1 {
+    font-size: 50px; }
+  .catalog .cat-item {
+    width: 100%;
+    flex-direction: row;
+    padding-bottom: 0;
+    margin-top: 40px; }
+    .catalog .cat-item p {
+      right: 0;
+      width: 45%; }
+    .catalog .cat-item .cat-text {
+      width: 50%; }
+      .catalog .cat-item .cat-text h2 {
+        font-size: 24px; }
+      .catalog .cat-item .cat-text p {
+        font-size: 18px; } }
+
+@media (max-width: 700px) {
+  .catalog .cat-item p {
+    width: 40%; } }
+
+@media (max-width: 600px) {
+  .catalog-title {
+    height: 200px; }
+    .catalog-title h1 {
+      font-size: 36px;
+      margin-top: 70px; }
+  .catalog {
+    margin-top: 0; }
+    .catalog .cat-item {
+      flex-direction: column;
+      padding-bottom: 120px; }
+      .catalog .cat-item p {
+        width: 90%;
+        left: 0; }
+      .catalog .cat-item .cat-text {
+        width: 100%; } }
+
+@media (max-width: 500px) {
+  .catalog .cat-item .cat-text h2 {
+    font-size: 22px; } }
