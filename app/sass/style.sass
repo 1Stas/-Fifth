@@ -645,13 +645,99 @@ img
 				font-size: 20px
 				font-weight: 200
 
-			
-
-
+.video 
+	position: relative
+	width: 90%
+	margin: 0 auto
+	margin-top: 80px
+	display: flex
+	.vid-img
+		position: relative
+		width: 60%
+		picture img
+			display: block
+		svg 
+			position: absolute
+			left: 50%
+			top: 50%
+			width: 160px
+			transform: translate(-50%, -50%)
+	.vid-text
+		width: 40%
+		border: 1px solid #f1f1f1
+		padding: 100px 60px 60px 60px
+		line-height: 2
+		h2 
+			position: relative
+			font-size: 30px
+			margin-bottom: 60px
+			svg 
+				position: absolute
+				top: -60px
+				left: 0
+				width: 50px
+				fill: #63d1bb
+		p, a 
+			font-size: 20px
+		a 
+			margin-top: 80px
 
 
 // Page 3 //////////////////////////////////////////////////////////////////
 
+.form
+	width: 90%
+	margin: 0 auto
+	.itemp 
+		font-size: 20px
+		width: 60%
+		margin: 0 auto
+		margin-top: 60px
+	.form-wrapper 
+		width: 60%
+		margin: 0 auto
+		.radio
+			position: relative
+			&:before
+				position: absolute
+				content: "ТИП"
+				color: #63d1bb
+				font-size: 20px
+				font-weight: 800
+				top: 30px
+				left: -100px
+			label
+				width: 10%
+				input[type="radio"]
+					opacity: 0
+				input[type="radio"]:checked + .check:after
+					opacity: 1
+				p
+					position: relative
+					font-size: 20px
+					font-weight: 800
+					padding-left: 80px
+					&:before
+						position: absolute
+						content: ""
+						border: 2px solid black
+						border-radius: 50%
+						width: 50px
+						height: 50px
+						top: -14px
+						left: 0px
+						background: #fff
+					&:after
+						position: absolute
+						content: ""
+						border: 1px solid #63d1bb
+						border-radius: 50%
+						width: 20px
+						height: 20px
+						top: 1px
+						left: 16px
+						background: #63d1bb
+						opacity: 0
 
 
 // Page 1 media ////////////////////////////////////////////////////////////
@@ -1064,6 +1150,32 @@ img
 
 // Page 2 style ////////////////////////////////
 
+@media (max-width: 1300px)
+	.video
+		.vid-img
+			width: 100%
+		.vid-text
+			width: 100%
+			padding: 80px 60px 60px 60px
+			h2 
+				margin-bottom: 30px
+			a 
+				margin-top: 20px
+
+@media (max-width: 1200px)
+	.video
+		flex-wrap: wrap
+		.vid-img
+			width: 100%
+		.vid-text
+			padding: 60px
+			width: 100%
+			h2 
+				padding-left: 80px
+				svg
+					left: 0
+					top: 5px
+	
 @media (max-width: 800px)
 	.catalog-title h1
 		font-size: 50px
@@ -1107,6 +1219,25 @@ img
 				left: 0
 			.cat-text
 				width: 100%
+
+	.video
+		border: 1px solid #f1f1f1
+		margin-top: 40px
+		.vid-img
+			margin-top: 120px
+		.vid-text
+			padding: 20px
+			h2 
+				position: absolute
+				top: 0px
+				font-size: 24px
+				line-height: 1.4
+				padding-left: 70px
+				svg 
+					top: 0
+					left: -10px
+			p, a 
+				font-size: 18px
 
 @media (max-width: 500px)
 	.catalog
